@@ -576,8 +576,8 @@ if(HAVE_FULLFSYNC)
   add_definitions(-DHAVE_FULLFSYNC)
 endif()
 
-include_directories(${PROJECT_SOURCE_DIR})
-include_directories(${PROJECT_SOURCE_DIR}/include)
+include_directories(BEFORE ${PROJECT_SOURCE_DIR})
+include_directories(BEFORE ${PROJECT_SOURCE_DIR}/include)
 
 if(USE_COROUTINES)
   if(USE_FOLLY OR USE_FOLLY_LITE)
